@@ -41,7 +41,7 @@ def bin_search(target, low, high, int_list, n=0):  # must use recursion
    if int_list[n] != target and n == 0:
       n = (high - low)//2 + low 
       
-   if int_list[high-1] < target or int_list[low] > target:
+   if int_list[high] < target or int_list[low] > target:
       return None
    elif int_list[n] == target:
       return n
