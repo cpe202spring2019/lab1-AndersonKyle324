@@ -1,3 +1,4 @@
+import copy
 
 def max_list_iter(int_list):  # must use iteration not recursion
    """finds the max of a list of numbers and returns the value (not the index)
@@ -18,14 +19,17 @@ def reverse_rec(int_list, rev_list=[], spot=0, count=0):   # must use recursion
    If list is None, raises ValueError"""
    if int_list == None:
       raise ValueError
+      
    if count == 0:
+      rev_list = []
       spot = len(int_list) - 1
       count += 1
-   if spot < 0:
-      return rev_list
    if spot >= 0:
       rev_list.append(int_list[spot])
-   return reverse_rec(int_list, rev_list, spot - 1, count)
+      spot -= 1
+      if spot < 0:
+         return rev_list
+   return reverse_rec(int_list, rev_list, spot, count)
 
 
 def bin_search(target, low, high, int_list, n=0):  # must use recursion
