@@ -9,9 +9,9 @@ class TestLab1(unittest.TestCase):
     
     # Add more tests!
     def test_eq(self):
-        loc1 = Location("Orange", 154, 300)
-        loc2 = Location("Raising Canes", 420, 420)
-        loc3 = Location("Raising Canes", 420, 420)
+        loc1 = Location("Orange", 30, 30)
+        loc2 = Location("Raising Canes", 52, 179)
+        loc3 = Location("Raising Canes", 52, 179)
         self.assertEqual(loc1 == loc2, False)
         self.assertEqual(loc3 == loc2, True)
 
