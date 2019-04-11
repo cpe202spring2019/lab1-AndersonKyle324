@@ -51,6 +51,9 @@ def bin_search(target, low, high, int_list, n=0):  # must use recursion
    elif int_list[n] < target:
       if n+1 <= len(int_list)-1 and int_list[n+1] > target:
          return None
-      n += (high-n)//2 #addN
+      addN = (high-n)//2
+      if addN == 0:
+         addN = 1
+      n += addN
    return bin_search(target, low, high, int_list, n)
       

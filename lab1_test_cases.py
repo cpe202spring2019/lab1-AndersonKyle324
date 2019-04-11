@@ -42,7 +42,7 @@ class TestLab1(unittest.TestCase):
     def test_bin_search_range_none(self):
         list_val2 = [0,5,7,22]
         #tests limited range and no target present
-        self.assertEqual(bin_search(22, 1, len(list_val2)-1, list_val2), 2 )
+        self.assertEqual(bin_search(23, 1, len(list_val2)-1, list_val2), None )
 
         
 if __name__ == "__main__":
