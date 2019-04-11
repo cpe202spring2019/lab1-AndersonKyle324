@@ -32,7 +32,7 @@ class TestLab1(unittest.TestCase):
         list_val4 = [0,1,5,6,23]
         val = 5
         self.assertEqual(bin_search(val, 0, len(list_val4)-1, list_val4), val//2)
-        self.assertEqual(bin_search(0, 0, len(list_val4)-1, list_val4), 0)
+        self.assertEqual(bin_search(23, 0, len(list_val4)-1, list_val4), 4)
         
         
     def test_bin_search_none(self):
